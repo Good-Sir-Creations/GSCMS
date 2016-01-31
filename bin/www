@@ -7,13 +7,13 @@
 var app = require('../app');
 var debug = require('debug')('GSCMS:server');
 var http = require('http');
-var pg = require('pg');
+var config = require('../.config.json').gscms;
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || config.http);
 app.set('port', port);
 
 /**
