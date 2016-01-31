@@ -10,20 +10,10 @@ var http = require('http');
 var pg = require('pg');
 
 /**
- * Check to see current progress
- */
-var config = require('../config');
-if(!config.db.user && !config.db.pass) {
-    app = require('../init');
-    if(process.env.USER !== 'postgres') return;
-}
-
-
-/**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3001');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
